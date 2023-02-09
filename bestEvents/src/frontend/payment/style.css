@@ -1,0 +1,47 @@
+.bg-red{
+    background-color: #F0063E;
+}
+.dark1{
+    background-color: #dddddd;
+}
+.dark2{
+    background-color: #efefef;
+}
+.dark3{
+    background-color: #dadada;
+}
+.text-gray{
+    color: #7e7e7e;
+}
+.btn-red{
+    background-color: #F0063E;
+    color: white;
+}
+.btn-red:hover{
+    background-color: #b8022c;
+    color: white;
+    
+}
+.color-red{
+    color: #F0063E;
+}
+
+.btn-pay{
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+.btn-pay > p {
+    transition-property: color;
+    transition-duration: 300ms;
+}
+.btn-pay:hover{
+    cursor: pointer;
+    color: black;
+    background-color: #F0063E;
+}
+.disabled{
+    background-color: #00000010;
+}
+.bg-d{
+    background-color: #00000010;
+}

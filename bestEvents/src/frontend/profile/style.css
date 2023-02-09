@@ -1,0 +1,68 @@
+.bg-red{
+    background-color: #F0063E;
+}
+.dark1{
+    background-color: #1C1C1C;
+}
+.dark2{
+    background-color: #2F2F2F;
+}
+.dark3{
+    background-color: #00000020;
+}
+.text-gray{
+    color: #7e7e7e;
+}
+.btn-red{
+    background-color: #F0063E;
+    color: white;
+}
+.btn-red:hover{
+    background-color: #b8022c;
+    color: white;
+    
+}
+.color-red{
+    color: #F0063E;
+}
+.unselected{
+    background-color: #b8022d70;
+    color: #ffffff70;
+}
+.image{
+    width: 52px;
+    opacity : 0.2;
+}
+.place{
+    width: 30vh;
+    height: 20vh;
+}
+.item{
+    cursor: pointer;
+    border: 2px solid #FFFFFF00;
+    border-radius: .5rem;
+}
+
+.addNew{
+    border: 2px solid #FFFFFF00;
+    border-radius: 10px;
+}
+#newEvent{
+    cursor: pointer;
+    background-color: #b8022d70;
+    width: 30vh;
+    height: 30vh;
+}
+#horizont{
+    background-color: white;
+    width: 20vh;
+    height: 4vh;
+}
+#vertical{
+    background-color: white;
+    height: 20vh;
+    width: 4vh;
+}
+.poiter{
+    cursor: pointer;
+}

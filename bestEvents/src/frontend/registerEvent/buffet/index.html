@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>BestEvents</title>
+</head>
+<body>
+    <div id="company">
+
+    </div>
+
+    <div id="menu" class="mt-5">
+
+    </div>
+
+    <input id="qtd" type="number" class="mt-5">
+
+    <button onclick="progress()">Prosseguir</button>
+
+
+    <script>
+        let selectedItens = [];
+        let table = document.getElementById("company");
+
+        fetch("http://localhost:3000/api/buffet").then((item) =>{
+            return item.json();
+        }).then((data)=>{
+
+            data.forEach((company) =>{
+                table.innerHTML += 
+                `
+                <button onclick="menu('${company.id}')">${company.nome}</button>
+                `
+            })
+
+
+            console.log(data);
+        })
+
+
+        function menu(compabyId){
+            let menu = document.getElementById("menu");
+            menu.innerHTML = ""
+
+            var options = {
+                method: "POST",
+                headers: new Headers({ 'Content-Type': 'application/json' }),
+                body: JSON.stringify({id: compabyId})
+            }
+
+            fetch("http://localhost:3000/api/menu", options).then(res=>{
+                return res.json();
+            }).then((data) =>{
+                console.log(data);
+                data.forEach((value) =>{
+                    menu.innerHTML += 
+                    `
+                    <div>
+                        <b>${value.item}</b>
+                        <p>Valor: R$${value.valorUnidade}</p>
+                        <button onclick="addItem('${value.id}', ${value.valorUnidade})">Adicionar</button> 
+                    </div>
+                    `
+                })
+            })
+
+        }
+
+        function addItem(id, value){
+            let quantity = document.getElementById("qtd").value;
+
+            let item = {
+                id: id,
+                qtd: quantity,
+                total: value * quantity
+            }
+
+            console.log(item);
+
+            selectedItens.push(item);
+            console.log(selectedItens);
+
+        }
+
+        function progress(){
+            let event = JSON.parse(window.localStorage.getItem("userEvent"))
+
+            event.buffet = selectedItens;
+
+            window.localStorage.setItem("userEvent", JSON.stringify(event));
+
+            // window.location.href="";
+        }
+
+
+    </script>
+</body>
+</html>

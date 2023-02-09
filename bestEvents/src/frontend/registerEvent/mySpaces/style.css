@@ -1,0 +1,61 @@
+.color-red{
+    color: #F0063E;
+}
+.bg-red{
+    background-color: #F0063E;
+}
+.btn-red{
+    background-color: #F0063E;
+    color: white;
+}
+.dark1{
+    background-color: #1C1C1C;
+}
+.dark2{
+    background-color: #2F2F2F75;
+}
+.dark3{
+    background-color: #00000020;
+}
+.btn-red:hover{
+    background-color: #b8022c;
+    color: white;
+    
+}
+.btn-dark1{
+    background-color: #00000025;
+
+    transition-property: background;
+    transition-duration: 200ms;
+}
+.btn-dark1:hover{
+    background-color: #00000050;
+}
+.text-red{
+    color: #F0063E;
+}
+.input-red{
+    border-color: #F0063E;
+}
+
+#container{
+    width: 100vw;
+    height: 100vh;
+    background: url(./images/mainImage.jpg);
+    background-size: cover;
+}
+
+.image-home{
+    filter: invert(1);
+    opacity: 0.5;
+}
+
+.place{
+    display: inline-block;
+    transition: all 0.3s ease-out;
+}
+
+.place:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}

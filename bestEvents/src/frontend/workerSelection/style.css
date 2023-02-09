@@ -1,0 +1,61 @@
+.bg-red{
+    background-color: #F0063E;
+}
+.dark1{
+    background-color: #1C1C1C;
+}
+.dark2{
+    background-color: #2F2F2F;
+}
+.dark3{
+    background-color: #404040;
+}
+.text-gray{
+    color: #7e7e7e;
+}
+.btn-red{
+    background-color: #F0063E;
+    color: white;
+}
+.btn-red:hover{
+    background-color: #b8022c;
+    color: white;
+    
+}
+.text-red{
+    color: #F0063E;
+}
+
+.img{
+    filter: invert(1);
+    opacity: .3;
+}
+
+/* code link: https://umdevqualquer.com.br/como-fazer-reticenciasellipsis-apenas-com-css */
+.worker-name{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#avaiable-workes{
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+*{
+    scrollbar-width: thin;
+    scrollbar-color: rgb(176, 176, 176) none;
+}
+*::-webkit-scrollbar {
+    width: 8px;
+} 
+*::-webkit-scrollbar-track {
+    background: none;
+} 
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(176, 176, 176);
+    border-radius: 20px;
+    border: 3px solid none;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>BestEvents</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md dark1 navbar-dark justify-content-between px-4 shadow-sm">
+        <!-- shadow-sm p-3 mb-5 bg-body rounded -->
+        <a class="navbar-brand" href="#">
+            <!-- <div class="rounded-white d-inline-block">
+                <img src="./images/xicara (1).png" width="24" class="d-inline-block align-text-top ">
+            </div> -->
+            <b class="text-red">BESTEVENTS</b>
+        </a>
+    </nav>
+    
+    <main class="container d-flex mt-5 gap-5">
+        <div id="form" class="" style="width: 70%;">
+            <p class="h4 mb-4">Informações sobre seu espaço</p>
+            <div class=" mt-4">
+                <b>Informações sobre o seu espaço</b>
+                <p>Apenas interessados no seu imóvel que agendarem uma visita terão acesso ao endereço completo do seu imóvel.</p>
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="nome" onblur="validZipCode()">
+                        <label for="name">Nome para o local</label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="accessibility" aria-label="Floating label select example">
+                            <option value="" disabled selected>Acessibilidade</option>
+                            <option value="1">Sim</option>
+                            <option value="0">Não</option>
+                        </select>
+                        <label for="accessibility">Acessibilidade</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Descrição" id="description" style="height: 100px; max-height: 300px;"></textarea>
+                        <label for="description">Descrição</label>
+                    </div>
+
+                </form>
+            </div>
+            <div class="my-3 p-2">
+                <div class="progress mb-4" style="height: 5px;">
+                    <div class="progress-bar bg-red" role="progressbar" aria-label="Example 5px high" style="width: 40%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="w-100 text-end"><p class="mb-0">Etapa 2 de 5</p></div>
+                    <div class="w-100 text-end"><a class="btn btn-danger" onclick="next()">Próximo</a></div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <!-- --------------------------- -->
+        <div id="help" class="" style="width: 30%;">
+            <div id="help-content" class="shadow border p-3">
+                <b>Informações importantes</b>
+                <p>Com estas informações as pessoas podem se identificarem melhor com o seu espaço, aumentando a chance de selecioná-lo</p>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

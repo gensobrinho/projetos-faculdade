@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>BestEvents</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light justify-content-between px-4 shadow-sm">
+        <a class="navbar-brand" href="#">
+            <b class="text-red">BESTEVENTS</b>
+        </a>
+        <a href="#" class="link-secondary" onclick="noWorker()">Continuar sem funcionários</a>
+    </nav>
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="resume" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Currículo</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+            </div>
+        </div>
+        </div> -->
+    </div>
+
+
+
+
+    <div class="bg-red py-3">
+        <div class="container">
+            <p id="username" class="h3 text-light">Olá, Usuário</p>
+            <p class="text-light">Nesta etapa da organização de seu evento, você poderá escolher trabalhadores parceiros da BestEvents para atuarem em seu evento. O valor de cada um deles é calculado automaticamente de acordo com o tamanho do evento. Vale ressaltar que esta etapa é opcional e não é obrigatório a contratação de funcionários, você pode pular esta etapa a qualquer momento.</p>
+        </div>  
+    </div>
+    <main class="container d-flex mt-5 gap-5">
+        <div id="avaiable-workes" class="d-flex flex-wrap gap-2" style="width: 65%; max-height: 90vh;">
+            
+            <!-- <div id="alert-empaty" class="text-secondary h1 opacity-50 text-center mt-5 d-block">
+                NENHUM LOCAL CADASTRADO
+            </div> -->
+
+            <!-- <div class="card mt-3" style="width: 15rem; height: 20rem;" onclick="select('${worker.id}')">
+                <div class="card-img-top bg-secondary d-flex justify-content-center align-items-center" style="height: 10rem;">
+                    <img src="./images/trabalhador.png" class="image-home img" width="64"  alt="...">
+                </div>
+                
+                <div class="card-body">
+                    <span style="font-size: 0.75em;">Segurança</span>
+                    <p class="card-title worker-name h5 pb-1">Vinícius Gonzaga</p>
+                    <p class="card-text">Castelo, Belo Horizonte</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-secondary w-50">Currículo</a>
+                        <a href="#" class="btn btn-red w-50">Selecionar</a>
+                    </div>
+                </div>
+            </div> -->
+            
+
+            
+
+
+        </div>
+        <!-- --------------------------- -->
+        <div class="" style="width: 35%;">
+            <div class="shadow border position-relative mb-5">
+                <div class="d-flex justify-content-center mt-3">
+                    <p class="h5 mb-0">Selecionados</p>
+                </div>
+                <div class="text-secondary">
+                    <hr>
+                </div>
+                <div id="selected-workes" class="d-flex flex-column px-3 gap-3 overflow-auto" style="min-height: 80vh; max-height: 80vh;">
+
+                    <!-- javascript content -->
+
+                </div>
+                <!-- <div class="position-absolute bottom-0 d-flex justify-content-center p-3 w-100">
+                    <a class="btn btn-red" style="min-width: 100%;">Confirmar</a>
+                </div> -->
+                
+                <div id="progress" class="position-absolute bottom-0 start-0 bg-light w-100 d-flex justify-content-center p-3">
+                    <a href="#" class="btn btn-red w-100" onclick="progress()">Prosseguir</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

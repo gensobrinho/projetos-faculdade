@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>BestEvents - Perfil</title>
+ </head>
+ <body class="dark1">
+    <nav class="navbar navbar-expand-md dark1 navbar-dark px-4 justify-content-center shadow">
+
+        <a class="navbar-brand poiter" onclick="landpage()">
+            <b class="color-red" >BESTEVENTS</b>
+        </a>
+            
+        <a onclick="logOut()" class="btn link-danger position-absolute top-50 end-0 translate-middle-y me-5">Sair</a>
+        
+    </nav>
+    <div class="dark2 rounded">
+        <div class="d-flex flex-column align-items-center">
+            <div class="dark3 p-4 rounded-circle mt-4" style="width: 8em;">
+                <img class="" src="./image/user.png" style="width: 100%;">
+            </div>
+            <b id="username" class="text-light my-3" style="font-size: 1.5em;">Nome do Usuário</b>
+            <!-- <p id="biografy" class="text-center text-light mt-3" style="max-width: 350px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nulla mollitia ullam harum modi voluptas temporibus libero hic.</p> -->
+        </div>
+        
+        
+    </div>
+
+    <div class="d-flex justify-content-center pt-4">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button id="event" onclick="change('event')" class="btn btn-dark btn-red">Meus Eventos</button>
+            <button id="place" onclick="change('place')" class="btn btn-red btn-dark unselected">Meus Locais</button>
+            <button id="work" onclick="change('work')" class="btn btn-red btn-dark unselected">Meus Trabalhos</button>
+        </div>
+    </div>
+    <!-- ----------------MyEvents---------------- -->
+    <div class="d-flex justify-content-center">
+        <div id="myevent" class="d-block" style="width: 70%;">
+
+        </div>
+    </div>
+
+    <!-- -------------------MyPlaces------------- -->
+    <div class="d-flex justify-content-center">
+        <div id="myplace" class="d-none" style="width: 70%;">
+
+        </div>
+    </div>
+
+    <!-- -------------------MyWorks-------------- -->
+    <div class="d-flex justify-content-center">
+        <div id="mywork" class="d-none" style="width: 70%;">
+
+        </div>
+      
+    </div>
+    
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
+ </body>
+ </html>

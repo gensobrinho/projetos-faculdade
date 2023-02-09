@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>BestEvents</title>
+</head>
+<body>
+
+    <div id="container" class="position-relative">
+        <div id="form" class="bg-light container rounded position-absolute top-50 start-50 translate-middle p-5">
+            <div class="d-flex justify-content-center">
+                <div class="bg-red p-2 d-inline-block rounded-circle">
+                    <img src="./images/xicara.png" width="42">
+                </div>
+            </div>
+
+            <div class="text-center my-3">
+                <b class="text-red" style="font-size: 1.5em;">CADASTRO</b>
+            </div>
+            <div class="py-3 d-flex justify-content-center align-items-center">
+                <div class="rounded-circle bg-red" style="height: 1em; width: 1em;"></div>
+                <div class="bg-red" style="height: .3em; width: 45%;" ></div>
+                <div class="rounded-circle bg-red" style="height: 1em; width: 1em;"></div>
+                <div class="bg-red" style="height: .3em; width: 45%;" ></div>
+                <div class="rounded-circle bg-red" style="height: 1em; width: 1em;"></div>
+            </div>
+            <div class="text-center mb-3">
+                <b class="mb-0" style="font-size: 1.2em;">Tipo de Cadastro</b>
+            </div>
+            <div id="alertFail2" class="d-none alert alert-danger">Uma opção deve ser selecionda</div>
+            <div id="alertSuccess2" class="d-none alert alert-success">Salvando suas Informações...</div>
+            <form class="d-flex flex-column gap-3" style="width: 100%;">
+                <div>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="radio" name="userType" value="organizador">
+                        <b>Organizador</b>
+                    </div>
+                    <p class="mb-0">Para você que está interessado em criar um evento para você ou para sua empresa.</p>
+
+                </div>
+                <div>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="radio" name="userType" value="fornecedor">
+                        <b>Fornecedor</b>
+                    </div>
+                    <p class="mb-0">Para você que deseja oferecer seu espaço para criação de eventos.</p>
+                </div>
+                <div>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="radio" name="userType" value="trabalhador">
+                        <b>Trabalhador</b>
+                    </div>
+                    <p class="mb-0">Para você que deseja encontrar um evento para prestar serviços.</p>
+                </div>
+                
+                
+                
+            </form>
+            <div class="text-center pt-4">
+                <button class="btn btn-red" onclick="signUp3()"><b>REGISTRAR E CONTINUAR</b></button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

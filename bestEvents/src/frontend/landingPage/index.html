@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>BestEvents</title>
+</head>
+<body id="bd">
+
+    <div id="" class="d-none dark2 rounded position-absolute top-50 start-50 translate-middle p-5 shadow-lg" style="z-index: 1;">
+        <b class="text-light">Selecione o Tipo de Evento que Deseja</b>
+        <ul class="list-group mt-3">
+            <li class="list-group-item list-group-item-action">Aniversário</li>
+            <li class="list-group-item list-group-item-action">Show</li>
+            <li class="list-group-item list-group-item-action">Confraternização</li>
+            <li class="list-group-item list-group-item-action">Festival</li>
+            <li class="list-group-item list-group-item-action">Reunião</li>
+            <li class="list-group-item list-group-item-action" >Congresso</li>
+            <li class="list-group-item list-group-item-action">Palestra</li>
+            <li class="list-group-item list-group-item-action">Outro</li>
+        </ul>
+    </div>
+
+    <nav class="navbar navbar-expand-md dark1 navbar-dark justify-content-between px-4 fixed-top shadow-lg">
+        <!-- shadow-sm p-3 mb-5 bg-body rounded -->
+        <a class="navbar-brand" href="#">
+            <!-- <div class="rounded-white d-inline-block">
+                <img src="./images/xicara (1).png" width="24" class="d-inline-block align-text-top ">
+            </div> -->
+            <b class="color-red">BESTEVENTS</b>
+        </a>
+        <ul class="navbar-nav d-flex gap-5">
+            <li class="nav-item">
+                <a class="nav-link text-light link-nav rounded" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light link-nav rounded" href="#sugestoes">Sugestões</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light link-nav rounded" href="#eventos">Eventos</a>
+            </li>
+            <li class="nav-item">
+                <a class="link-nav nav-link text-light link-nav rounded" href="#sobre-nos">Sobre Nós</a>
+            </li>
+        </ul>
+        <div class="navbar-nav">
+            <div class="" >
+                <a class="nav-link btn d-flex align-items-center justify-content-center gap-2" onclick="user()">
+                    <p id="username" class="mb-0 text-light">USER</p>
+                    <img src="./images/account.png" width="26" class="rounded-white">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <main class="dark1">
+
+        <div>
+            <img src="./images/mainImage.jpg" class="img-fluid position" style="">
+            <div id="home" class="title">
+                
+                <p class="text-light test" style="font-size: 2.5em;">SONHOS SE TORNAM REALIDADE</p>
+                <p class="color-red text-bold mt-4" style="font-size: 6em;">BESTEVENTS</p>
+               
+            </div>
+        </div>
+        <div class="dark2 container rounded my-5 py-4 text-center shadow">
+            <h3 class="text-light">Nos Diga o seu Sonho, e o Tornaremos Realidade!</h3>
+            <p class="text-gray">A BestEvents simplifica qualquer evento para que você se preocupe apenas com o mais importante, APROVEITÁ-LO</p>
+            <button class="btn btn-red mt-3" type="button" data-bs-toggle="modal" data-bs-target="#menuEvents">
+                <b>VAMOS LÁ</b>
+            </button>
+        </div>
+
+        <div class="modal fade" id="menuEvents" tabindex="-1" aria-labelledby="#menuTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="menuTitle">Selecione o Tipo de Evento que Deseja</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <button class="list-group-item list-group-item-action" onclick="addEventType('aniversario')">Aniversário</button>
+                        <button class="list-group-item list-group-item-action" onclick="addEventType('show')">Show</button>
+                        <button class="list-group-item list-group-item-action" onclick="addEventType('confraternizacao')">Confraternização</button>
+                        <button class="list-group-item list-group-item-action" onclick="addEventType('festival')">Festival</button>
+                        <button class="list-group-item list-group-item-action" onclick="addEventType('reuniao')">Reunião</button>
+                        <button class="list-group-item list-group-item-action" onclick="addEventType('congresso')">Congresso</button>
+                        <button class="list-group-item list-group-item-action" onclick="addEventType('palestra')">Palestra</button>
+                        <li class="list-group-item list-group-item-action" >
+                            <div data-bs-toggle="collapse" href="#collapseExample"  aria-expanded="false" aria-controls="collapseExample">Outro</div>
+                            
+                            <div class="collapse" id="collapseExample">
+                                <p class="mb-0 mt-1">Como deseja denominar o Seu Evento?</p>
+                                <input id="otherEvent" type="text" class="form-control">
+                                <div class="text-center">
+                                    <a class="btn btn-red mt-2" onclick="addEventType(document.getElementById('otherEvent').value)">Confirmar</a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="container d-flex flex-column align-items-center">
+            <h2 id="sugestoes" class="text-light text-bold h1">ALGUMAS SUGESTÕES</h2>
+
+            <div> <!-- carousel -->
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active ">
+                            <div class="d-flex flex-column align-items-center my-3">
+                                <h4 class="text-light mb-3">Aniversário</h4>
+                                <img class="img-fluid mb-3 rounded" src="./images/festa-de-aniversario-simples.jpg" width="70%" style="height: 60vh;">
+                                <p class="text-light" style="width: 70%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet saepe sequi veritatis fugit eaque, dolorum asperiores ducimus quisquam, labore perspiciatis aliquam. Aliquam, dolor odio! Architecto ipsa maxime repellat exercitationem veritatis?</p>
+                            </div>
+                            
+                        </div>
+                  
+                        <div class="carousel-item">
+                            <div class="d-flex flex-column align-items-center my-3">
+                                <h4 class="text-light mb-3">Reunião</h4>
+                                <img class="img-fluid mb-3 rounded" src="./images/reuniao.jpeg" width="70%" style="height: 60vh;">
+                                <p class="text-light" style="width: 70%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet saepe sequi veritatis fugit eaque, dolorum asperiores ducimus quisquam, labore perspiciatis aliquam. Aliquam, dolor odio! Architecto ipsa maxime repellat exercitationem veritatis?</p>
+                            </div>
+                        </div>
+                  
+                        <!-- Para adicionar um novo item do carrossel basta copiar esse comentario abaixo -->
+
+                        <!-- <div class="carousel-item text-light">
+                            <div class="d-flex flex-column align-items-center my-3">
+                                <h4 class="text-light mb-3">Aniversário</h4>
+                                <img class="img-fluid mb-3 rounded" src="./images/festa-de-aniversario-simples.jpg" width="70%">
+                                <p class="text-light" style="width: 70%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet saepe sequi veritatis fugit eaque, dolorum asperiores ducimus quisquam, labore perspiciatis aliquam. Aliquam, dolor odio! Architecto ipsa maxime repellat exercitationem veritatis?</p>
+                            </div>
+                        </div> -->
+
+                    </div>
+                  
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+
+            <button class="btn btn-red mt-3" type="button" data-bs-toggle="modal" data-bs-target="#menuEvents">
+                <b>COMEÇAR A ORGANIZAR</b>
+            </button>
+        </div>
+        <div class="dark2 rounded mt-5 shadow">
+            <div class="container py-5" >
+                <h2 id="eventos" class="text-light text-center text-bold h1">SOBRE OS EVENTOS</h2>
+                <div class="d-flex text-light gap-5 mt-4">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non omnis repellat consequatur asperiores eos! Magnam similique ullam natus rem enim asperiores dolor vero blanditiis nemo sapiente, nobis culpa inventore error.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum laudantium voluptas aspernatur nemo fuga quos explicabo. Qui, autem sit, quo, dolores beatae sapiente fugiat earum in odio voluptatibus consequatur dignissimos?</p>
+                </div>
+                <div class="d-flex gap-5 justify-content-between mt-3">
+                    <div class="bg-light cards rounded shadow" style="">
+                        <img src="./images/engrenagem.png" class="img-fluid img-card">
+                        <h3 class="card-title mb-3">Equipamentos</h3>
+                        <p class="card-text text-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis adipisci facilis doloribus labore alias </p>
+                        <a class="color-red link-card" href="equipamentos"><b>Saiba Mais ></b></a>
+                    </div>
+
+                    <div class="bg-light cards rounded shadow">
+                        <img src="./images/food-delivery.png" class="img-fluid img-card">
+                        <h3 class="card-title mb-3">Buffet</h3>
+                        <p class="card-text text-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis adipisci facilis doloribus labore alias </p>
+                        <a class="color-red link-card" href="equipamentos"><b>Saiba Mais ></b></a>
+                    </div>
+
+                    <div class="bg-light cards rounded shadow">
+                        <img src="./images/trabalho-freelance.png" class="img-fluid img-card">
+                        <h3 class="card-title mb-3">Trabalhadores</h3>
+                        <p class="card-text text-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis adipisci facilis doloribus labore alias </p>
+                        <a class="color-red link-card" href="equipamentos"><b>Saiba Mais ></b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container d-flex justify-content-around mt-5 py-5">
+            <div class="d-flex flex-column align-items-center">
+                <h3 class="text-center color-red display-1 text-bold">R$ 10 milhões</h3>
+                <p class="text-center text-light">em receita gerada pela venda de inscrições.</p>
+            </div>
+            <div class="d-flex flex-column align-items-center ">
+                <h3 class="text-center color-red display-1 text-bold">+100 mil</h3>
+                <p class="text-center text-light">eventos organizados no último ano.</p>
+            </div>
+        </div>
+        <div class="dark2 py-5 rounded shadow">
+            <div class="container">
+                <h2 id="sobre-nos" class="text-center text-light text-bold h1">SOBRE A <span class="color-red">BESTEVENTS</span></h2>
+                <p class="text-light mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dicta, ipsam laudantium officia exercitationem nihil placeat eveniet voluptate mollitia, vel saepe voluptatem voluptatibus laborum ex voluptas quae corrupti. Maxime, laborum! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit tenetur esse quia consequatur? Aliquam sed voluptates in necessitatibus exercitationem commodi natus iusto mollitia. Nobis voluptatibus dolores autem hic doloremque! Aperiam.</p>
+                <div class="d-flex mt-4 gap-5 align-items-center">
+                    <div class="bg-red p-5 rounded-circle">
+                        <img src="./images/xicara (1).png" width="200">
+                    </div>
+                    <div class="">
+                        <h4 class="text-light text-center h2">Subtitulo</h4>
+                        <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad cum tempore, quia fugiat pariatur dignissimos architecto quis rerum explicabo recusandae, repellat soluta aspernatur! Esse modi soluta ullam totam repellendus ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad exercitationem amet hic omnis odit, animi quibusdam cupiditate culpa maiores a distinctio delectus molestias illum aut quae repudiandae eos. Aliquid?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-5 d-flex justify-content-between gap-5">
+            <div style="width: 50%;" class="mr-5">
+                <h3 class="text-light h1" style="font-weight: 700;">BESTEVENTS</h3>
+                <p class="text-gray mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptas harum nihil vero mollitia debitis quis rem, sed consequuntur error maxime iure ad minima, architecto sit sint eligendi fugit natus.</p>
+                <div class="d-flex gap-4">
+                    <img src="./images/instagram.png" width="36">
+                    <img src="./images/twitter.png" width="36">
+                </div>
+            </div>
+            <div style="width: 50%;" class="d-flex flex-column align-items-end">
+                <p class="h3 text-light mb-4">INSCREVA-SE PARA RECEBER NOTÍCIAS</p>
+                <form class="d-flex flex-column gap-3" style="width: 80%;">
+                    <input class="input-text rounded p-2 text-light shadow-sm" type="text" placeholder="Nome">
+                    <input class="input-text rounded p-2 text-light shadow-sm" type="email" placeholder="E-mail">
+                    <button class="btn btn-red">INSCREVER</button>
+                </form>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center py-4 text-light" style="background-color: #040404;">
+            Copyright ©2022 All Rights Reserved 
+        </div>
+    </main>
+    
+
+    
+   
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

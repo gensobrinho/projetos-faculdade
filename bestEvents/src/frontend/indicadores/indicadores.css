@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;700;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+}
+
+body{
+    background-image: url(./img/background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* CABEÇALHO */
+#header,footer{
+    background-color: #1F1F1F;
+    text-align: center;
+    color:#F0063E;
+}
+
+header img{
+    float: left;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+/* CONTEUDO */
+
+.container{
+    position: relative;
+    display: flex;
+}
+
+
+/*BARRA LATERAL*/
+
+.sidebar{
+    background-color: #1C1C1C;
+    text-align: center;
+    width: 250px;
+    height: auto
+}
+
+.sidebar-menu{
+    height: auto
+}
+.sidebar li{
+    text-decoration: none;
+}
+
+.sidebar h3{
+    color:#F0063E;
+}
+
+.sidebar-menu button{
+    width: 100%;
+    background-color: #1C1C1C;
+    padding: 30px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    transition: all 0.3s ease-out;
+}
+
+
+.sidebar-menu button:hover{
+    background-color: #F0063E;
+    cursor: pointer;
+}
+
+
+/*CARDS*/
+
+.card{
+    text-align: center;
+    background-color: #212529;
+    padding: 0.5em;
+    margin: 5px;
+    width: 100%;
+    height: 30%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    transition: all 0.3s ease-out;
+    border-radius: 10px;
+
+}
+
+.card .title{
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.card .resultado-aux, .back{
+    color: #F8F9FA;
+    margin-bottom: 4px;
+}
+
+.card .resultado{
+    font-size: 80px;
+    color: #F0063E;
+    transition: all 0.3s ease-out;
+    font-weight:bold;
+}
+
+.card:hover,
+button:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+
+/* ------------------- */

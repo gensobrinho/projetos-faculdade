@@ -1,0 +1,35 @@
+const Sequelize = require("sequelize");
+const db = require("./db");
+
+const buffetCompany = require("./BuffetCompany");
+
+const buffetMenuData = db.sequelize.define("menu",{
+    id:{
+        type: Sequelize.STRING,
+        primaryKey: true,
+        allowNull: false
+    },
+    item:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    unityValue:{
+        type: Sequelize.DOUBLE,
+        allowNull: false
+    },
+    category:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    description:{
+        type: Sequelize.TEXT,
+        allowNull: true
+    }
+});
+
+
+buffetCompany.hasOne(buffetMenuData);
+
+buffetMenuData.sync();
+
+module.exports = buffetMenuData;

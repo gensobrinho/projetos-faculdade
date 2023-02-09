@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>BestEvents</title>
+</head>
+<body class="">
+    <div id="container" class="position-relative">
+
+        <div id="form" class="form bg-light container rounded position-absolute top-50 start-50 translate-middle p-5">
+            <div class="d-flex justify-content-center">
+                <div class="bg-red p-2 d-inline-block rounded-circle">
+                    <img src="./images/xicara.png" width="42">
+                </div>
+            </div>
+
+            <div class="text-center my-3">
+                <b class="text-red" style="font-size: 1.5em;">CRIAÇÃO DE EVENTO</b>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="py-3 d-flex justify-content-center align-items-center progresss">
+                    <div class="rounded-circle bg-red" style="height: 1em; width: 1em;"></div>
+                    <div class="bg-red" style="height: .3em; width: 45%;" ></div>
+                    <div class="rounded-circle bg-red" style="height: 1em; width: 1em;"></div>
+                    <div class="bg-red" style="height: .3em; width: 45%;" ></div>
+                    <div class="rounded-circle bg-red" style="height: 1em; width: 1em;"></div>
+                </div>
+            </div>
+            
+            <div class="text-center mb-3">
+                <b class="mb-0" style="font-size: 1.2em;">Seleção de Equipamentos</b>
+                <p class="mb-0">Aqui você pode selecionar alguns equipamentos que são disponibilizados pela BestEvents para te entragar a melhor experiência possível.</p>
+            </div>
+
+            <div id="alertFail1" class="d-none alert alert-danger"></div>
+            <div id="alertSuccess1" class="d-none alert alert-success">Salvando suas Informações...</div>
+            <form id="equipamentSelection" class="d-flex flex-column align-items-center gap-3 pb-4">
+                <div id="select" class="row" style="width: 100%;">
+                    <div class="col-4">
+                        <select id="type" class="form-select input-red" onchange="searchName(this.value)">
+                            <option value="" disabled selected>Tipo de Equipamento</option>
+                            <!-- javascript content -->
+                        </select>
+                    </div>
+                    
+                    <div class="col-4">
+                        <select id="name" class="form-select input-red" onchange="activeQtd(this.value)" disabled>
+                            <option value="" disabled selected>Equipamento</option>
+                            <!-- javascript content -->
+                        </select>
+                    </div>
+                    
+                    <div class="col-3">
+                        <input id="qtd" type="number" class="form-control input-red" placeholder="Quantidade" min=1 max="999" onchange="valid(this.value)" disabled>
+                    </div>
+                    
+                    <!-- <div class="col-2">
+                        <input id="value0" class=" form-control input-red" value="Valor" disabled>
+                    </div> -->
+
+                    <div id="control" class="col-1 d-flex justify-content-center align-items-center">
+                        <a id="add-btn" class="btn btn-success" style="width: 100%;" onclick="addEquipament()" disabled>&crarr;</a>
+
+                        <!-- <button id="control0" type="button" onclick="removeEquip(0)" class="btn-close" aria-label="Close" disabled></button> -->
+                    </div>
+                    
+                </div>
+            </form>
+
+
+            <table id="selected-table" class="table">
+                <thead>
+                    <tr class="row">
+                        <th scope="col" class="col-1">#</th>
+                        <th scope="col" class="col-3">Tipo</th>
+                        <th scope="col" class="col-3">Nome</th>
+                        <th scope="col" class="col-2">Qtd.</th>
+                        <th scope="col" class="col-2">Preço</th>
+                        <th scope="col" class="col-1">Excluir</th>
+                    </tr>
+                    </thead>
+                    <tbody id="table-list">
+
+                    
+                    </tbody>
+              </table>
+
+            <!-- <div class="row" style="width: 100%;">
+                <div class="col-12">
+                    <button id="add-button" class="btn btn-dark1" style="width: 100%;" onclick="validForm(0)"><b>Adicionar</b></button>
+                </div>
+            </div> -->
+
+
+            <div class="text-center mt-5">
+                <!-- data-bs-toggle="modal" data-bs-target="#menuEvents"  -->
+                <button class="btn btn-red mt-3" type="button" onclick="progress()"><b>PROSSEGUIR</b></button>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+.bg-red{
+    background-color: #F0063E;
+}
+.btn-red{
+    background-color: #F0063E;
+    color: white;
+}
+.btn-red:hover{
+    background-color: #b8022c;
+    color: white;
+    
+}
+.text-red{
+    color: #F0063E;
+}
+.input-red{
+    border-color: #F0063E;
+}
+#container{
+    width: 100vw;
+    height: 100vh;
+    background: url(./images/mainImage.jpg);
+    background-size: cover;
+}
+
+#form{
+    max-width: 500px;
+}
+
+#link-register{
+    cursor: pointer;
+}
